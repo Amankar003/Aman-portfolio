@@ -12,7 +12,7 @@ export const P = {
   photo: IMG.portrait,
   aboutPhoto: IMG.canal,
   location: 'India • Remote Worldwide',
-  phone: '+91 7482095793',
+  phone: '+91 8252184741',
   email: 'amankar125@gmail.com',
   availability: '',
   studio: { name: 'Buildlyst', url: 'https://buildlyst.in', line: 'My AI & Data Engineering Studio. We build AI agents, ML pipelines and custom data systems for businesses.' },
