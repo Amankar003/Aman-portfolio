@@ -12,3 +12,6 @@ const html = `<!doctype html>
 <style>${css}</style></head><body><div id="root"></div><script>${js.replace(/<\/script/g, '<\\/script')}</script></body></html>`;
 fs.mkdirSync('dist', { recursive: true }); fs.writeFileSync('dist/index.html', html);
 console.log('built', (html.length / 1024).toFixed(0) + ' KB');
+
+// Create a 404.html for GitHub Pages
+fs.writeFileSync('dist/404.html', html);
