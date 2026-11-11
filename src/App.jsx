@@ -87,6 +87,15 @@ function End({ onOpen }) {
 export default function App() {
   const [panel, setPanel] = useState(null), [chat, setChat] = useState(false), [gameMode, setGameMode] = useState(false);
   const { scrollYProgress } = useScroll(); const sx = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
+  
+  // Scroll to hero section on page load
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash || hash === '#home') {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }, []);
+  
   const open = id => { setChat(false); setPanel(id); };
   const journey = () => setGameMode(true);
   const exitGameMode = () => setGameMode(false);
